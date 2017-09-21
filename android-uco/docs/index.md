@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# Desarrollo de una app básica
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+El **GDG de Córdoba** junto al **Aula de Software libre** de la **UCO** promueven este taller para que los participantes aprendan a crear una aplicación básica con Android, entender los entresijos y poder así customizar la aplicación a su gusto.
 
-## Commands
+## Qué debo de tener instalado
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* Android Studio.
+* Android Support Repository 47.0.0
+* SDK 23 o 24 (Android 6.0 o 7.0).
+* Dispositivo virtual para testeo o bien un dispositivo físico.
