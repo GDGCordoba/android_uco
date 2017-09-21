@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="./img/favicon.ico">
-        <title>My Docs</title>
+        <title>GDG Córdoba - Android básico</title>
         <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="./css/base.css" rel="stylesheet">
@@ -31,11 +31,27 @@
 
         <!-- Collapsed navigation -->
         <div class="navbar-header">
-            <a class="navbar-brand" href=".">My Docs</a>
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=".">GDG Córdoba - Android básico</a>
         </div>
 
         <!-- Expanded navigation -->
         <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href=".">Inicio</a>
+                    </li>
+                    <li >
+                        <a href="create_project/">Crear proyecto</a>
+                    </li>
+                </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -43,6 +59,16 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="create_project/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>
@@ -51,28 +77,21 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
-            <li><a href="#commands">Commands</a></li>
-            <li><a href="#project-layout">Project layout</a></li>
+        <li class="main active"><a href="#desarrollo-de-una-app-basica">Desarrollo de una app básica</a></li>
+            <li><a href="#que-debo-de-tener-instalado">Qué debo de tener instalado</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="desarrollo-de-una-app-basica">Desarrollo de una app básica</h1>
+<p>El <strong>GDG de Córdoba</strong> junto al <strong>Aula de Software libre</strong> de la <strong>UCO</strong> promueven este taller para que los participantes aprendan a crear una aplicación básica con Android, entender los entresijos y poder así customizar la aplicación a su gusto.</p>
+<h2 id="que-debo-de-tener-instalado">Qué debo de tener instalado</h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<li>Android Studio.</li>
+<li>Android Support Repository 47.0.0</li>
+<li>SDK 23 o 24 (Android 6.0 o 7.0).</li>
+<li>Dispositivo virtual para testeo o bien un dispositivo físico.</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
@@ -111,5 +130,5 @@ docs/
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-09-21 17:54:08
+Build Date UTC : 2017-09-21 18:18:04
 -->

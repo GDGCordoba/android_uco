@@ -1,1 +1,5 @@
 site_name: GDG Córdoba - Android básico
+
+pages:
+  - Inicio: index.md
+  - Crear proyecto: create_project.md

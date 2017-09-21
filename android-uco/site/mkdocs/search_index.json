@@ -2,23 +2,28 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Home"
+            "text": "Desarrollo de una app b\u00e1sica\n\n\nEl \nGDG de C\u00f3rdoba\n junto al \nAula de Software libre\n de la \nUCO\n promueven este taller para que los participantes aprendan a crear una aplicaci\u00f3n b\u00e1sica con Android, entender los entresijos y poder as\u00ed customizar la aplicaci\u00f3n a su gusto.\n\n\nQu\u00e9 debo de tener instalado\n\n\n\n\nAndroid Studio.\n\n\nAndroid Support Repository 47.0.0\n\n\nSDK 23 o 24 (Android 6.0 o 7.0).\n\n\nDispositivo virtual para testeo o bien un dispositivo f\u00edsico.", 
+            "title": "Inicio"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/#desarrollo-de-una-app-basica", 
+            "text": "El  GDG de C\u00f3rdoba  junto al  Aula de Software libre  de la  UCO  promueven este taller para que los participantes aprendan a crear una aplicaci\u00f3n b\u00e1sica con Android, entender los entresijos y poder as\u00ed customizar la aplicaci\u00f3n a su gusto.", 
+            "title": "Desarrollo de una app b\u00e1sica"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/#que-debo-de-tener-instalado", 
+            "text": "Android Studio.  Android Support Repository 47.0.0  SDK 23 o 24 (Android 6.0 o 7.0).  Dispositivo virtual para testeo o bien un dispositivo f\u00edsico.", 
+            "title": "Qu\u00e9 debo de tener instalado"
         }, 
         {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/create_project/", 
+            "text": "Creaci\u00f3n de un proyecto\n\n\nAbrimos Android Studio y pulsamos en \u201cStart a new Android Studio project\u201d", 
+            "title": "Crear proyecto"
+        }, 
+        {
+            "location": "/create_project/#creacion-de-un-proyecto", 
+            "text": "Abrimos Android Studio y pulsamos en \u201cStart a new Android Studio project\u201d", 
+            "title": "Creaci\u00f3n de un proyecto"
         }
     ]
 }
