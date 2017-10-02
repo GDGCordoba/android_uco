@@ -10,20 +10,20 @@
       
       
       
-        <link rel="shortcut icon" href="./assets/images/favicon.png">
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
     
     
       
-        <title>GDG Córdoba - Android básico</title>
+        <title>Crear un listado - GDG Córdoba - Android básico</title>
       
     
     
-      <script src="./assets/javascripts/modernizr-e826f8942a.js"></script>
+      <script src="../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="./assets/stylesheets/application-a20f419c8e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application-a20f419c8e.css">
       
     
     
@@ -59,7 +59,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="GDG Córdoba - Android básico" class="md-header-nav__button md-logo">
+        <a href=".." title="GDG Córdoba - Android básico" class="md-header-nav__button md-logo">
           
             <i class="md-icon md-icon--home"></i>
           
@@ -74,7 +74,7 @@
             
               
             
-            Inicio
+            Crear un listado
           
         </span>
       </div>
@@ -135,6 +135,54 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href=".." title="Inicio" class="md-nav__link">
+      Inicio
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../create_project/" title="Crear proyecto" class="md-nav__link">
+      Crear proyecto
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../vista/" title="Organizar la vista" class="md-nav__link">
+      Organizar la vista
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="Usando una API externa" class="md-nav__link">
+      Usando una API externa
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -146,11 +194,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Inicio
+        Crear un listado
       </label>
     
-    <a href="." title="Inicio" class="md-nav__link md-nav__link--active">
-      Inicio
+    <a href="./" title="Crear un listado" class="md-nav__link md-nav__link--active">
+      Crear un listado
     </a>
     
       
@@ -164,8 +212,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-debo-de-tener-instalado" title="Qué debo de tener instalado" class="md-nav__link">
-    Qué debo de tener instalado
+  <a href="#diferencia-entre-listview-y-recyclerview" title="Diferencia entre ListView y RecyclerView" class="md-nav__link">
+    Diferencia entre ListView y RecyclerView
   </a>
   
 </li>
@@ -176,54 +224,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="create_project/" title="Crear proyecto" class="md-nav__link">
-      Crear proyecto
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="vista/" title="Organizar la vista" class="md-nav__link">
-      Organizar la vista
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="api/" title="Usando una API externa" class="md-nav__link">
-      Usando una API externa
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="listado/" title="Crear un listado" class="md-nav__link">
-      Crear un listado
-    </a>
   </li>
 
     
@@ -248,8 +248,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-debo-de-tener-instalado" title="Qué debo de tener instalado" class="md-nav__link">
-    Qué debo de tener instalado
+  <a href="#diferencia-entre-listview-y-recyclerview" title="Diferencia entre ListView y RecyclerView" class="md-nav__link">
+    Diferencia entre ListView y RecyclerView
   </a>
   
 </li>
@@ -269,15 +269,13 @@
               
                 
                 
-                <h1 id="desarrollo-de-una-app-basica">Desarrollo de una app básica</h1>
-<p>El <strong>GDG de Córdoba</strong> junto al <strong>Aula de Software libre</strong> de la <strong>UCO</strong> promueven este taller para que los participantes aprendan a crear una aplicación básica con Android, entender los entresijos y poder así customizar la aplicación a su gusto.</p>
-<h2 id="que-debo-de-tener-instalado">Qué debo de tener instalado</h2>
-<ul>
-<li>Android Studio.</li>
-<li>Android Support Repository 47.0.0</li>
-<li>SDK 23 o 24 (Android 6.0 o 7.0).</li>
-<li>Dispositivo virtual para testeo o bien un dispositivo físico.</li>
-</ul>
+                <h1 id="crear-un-listado-de-elementos">Crear un listado de elementos</h1>
+<p>Para crear una lista de elementos, tenemos varias opciones. Podemos usar <em>ListView</em>, <em>RecyclerView</em>, o <em>GridView</em>.</p>
+<p>Nuestra implementación va a ser un listado vertical con datos. Un ejemplo de lo que queremos montar sería:</p>
+<p><img alt="Screenshot" src="../img/recycler.png" /></p>
+<h2 id="diferencia-entre-listview-y-recyclerview">Diferencia entre ListView y RecyclerView</h2>
+<p>Tanto el ListView como el RecyclerView nos sirven en caso de querer hacer listado como el de la imagen. Las diferencias son que el RecyclerView es una implementación más nueva, da más flexibilidad con animaciones, y además, como en su nombre se indica, recicla los items de la tabla por lo que supone un ahorro en memoria. El RecyclerView sólo tiene declarados los items visibles, y uno por encima y por debajo. Cuando el usuario hace scroll, las celdas que ya no se ven se reutilizan para mostrar las nuevas.</p>
+<p>En esta guía vamos a usar RecyclerView por estas razones.</p>
                 
                   
                 
@@ -296,20 +294,20 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-        
-          <a href="create_project/" title="Crear proyecto" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../api/" title="Usando una API externa" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Next
+                  Previous
                 </span>
-                Crear proyecto
+                Usando una API externa
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>
@@ -333,10 +331,10 @@
       
     </div>
     
-      <script src="./assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../assets/javascripts/application-f3ab9e5ff8.js"></script>
       
       
-      <script>app.initialize({url:{base:"."}})</script>
+      <script>app.initialize({url:{base:".."}})</script>
       
     
     

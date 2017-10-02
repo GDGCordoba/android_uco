@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-09-21</lastmod>
+     <lastmod>2017-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,31 @@
     
     <url>
      <loc>/create_project/</loc>
-     <lastmod>2017-09-21</lastmod>
+     <lastmod>2017-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/vista/</loc>
+     <lastmod>2017-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/api/</loc>
+     <lastmod>2017-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/listado/</loc>
+     <lastmod>2017-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

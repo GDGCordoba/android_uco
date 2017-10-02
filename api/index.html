@@ -10,20 +10,20 @@
       
       
       
-        <link rel="shortcut icon" href="./assets/images/favicon.png">
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
     
     
       
-        <title>GDG Córdoba - Android básico</title>
+        <title>Usando una API externa - GDG Córdoba - Android básico</title>
       
     
     
-      <script src="./assets/javascripts/modernizr-e826f8942a.js"></script>
+      <script src="../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="./assets/stylesheets/application-a20f419c8e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application-a20f419c8e.css">
       
     
     
@@ -59,7 +59,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="GDG Córdoba - Android básico" class="md-header-nav__button md-logo">
+        <a href=".." title="GDG Córdoba - Android básico" class="md-header-nav__button md-logo">
           
             <i class="md-icon md-icon--home"></i>
           
@@ -74,7 +74,7 @@
             
               
             
-            Inicio
+            Usando una API externa
           
         </span>
       </div>
@@ -135,6 +135,42 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href=".." title="Inicio" class="md-nav__link">
+      Inicio
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../create_project/" title="Crear proyecto" class="md-nav__link">
+      Crear proyecto
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../vista/" title="Organizar la vista" class="md-nav__link">
+      Organizar la vista
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -146,11 +182,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Inicio
+        Usando una API externa
       </label>
     
-    <a href="." title="Inicio" class="md-nav__link md-nav__link--active">
-      Inicio
+    <a href="./" title="Usando una API externa" class="md-nav__link md-nav__link--active">
+      Usando una API externa
     </a>
     
       
@@ -164,8 +200,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-debo-de-tener-instalado" title="Qué debo de tener instalado" class="md-nav__link">
-    Qué debo de tener instalado
+  <a href="#conexion-con-la-api" title="Conexión con la API" class="md-nav__link">
+    Conexión con la API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-retrofit" title="Antes de Retrofit" class="md-nav__link">
+    Antes de Retrofit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-retrofit" title="Configurando Retrofit" class="md-nav__link">
+    Configurando Retrofit
   </a>
   
 </li>
@@ -185,43 +235,7 @@
 
 
   <li class="md-nav__item">
-    <a href="create_project/" title="Crear proyecto" class="md-nav__link">
-      Crear proyecto
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="vista/" title="Organizar la vista" class="md-nav__link">
-      Organizar la vista
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="api/" title="Usando una API externa" class="md-nav__link">
-      Usando una API externa
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="listado/" title="Crear un listado" class="md-nav__link">
+    <a href="../listado/" title="Crear un listado" class="md-nav__link">
       Crear un listado
     </a>
   </li>
@@ -248,8 +262,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-debo-de-tener-instalado" title="Qué debo de tener instalado" class="md-nav__link">
-    Qué debo de tener instalado
+  <a href="#conexion-con-la-api" title="Conexión con la API" class="md-nav__link">
+    Conexión con la API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-retrofit" title="Antes de Retrofit" class="md-nav__link">
+    Antes de Retrofit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-retrofit" title="Configurando Retrofit" class="md-nav__link">
+    Configurando Retrofit
   </a>
   
 </li>
@@ -269,15 +297,59 @@
               
                 
                 
-                <h1 id="desarrollo-de-una-app-basica">Desarrollo de una app básica</h1>
-<p>El <strong>GDG de Córdoba</strong> junto al <strong>Aula de Software libre</strong> de la <strong>UCO</strong> promueven este taller para que los participantes aprendan a crear una aplicación básica con Android, entender los entresijos y poder así customizar la aplicación a su gusto.</p>
-<h2 id="que-debo-de-tener-instalado">Qué debo de tener instalado</h2>
-<ul>
-<li>Android Studio.</li>
-<li>Android Support Repository 47.0.0</li>
-<li>SDK 23 o 24 (Android 6.0 o 7.0).</li>
-<li>Dispositivo virtual para testeo o bien un dispositivo físico.</li>
-</ul>
+                <h1 id="usando-una-api-externa">Usando una API externa</h1>
+<p>Una API es una Interfaz de Programación de Aplicaciones (Application Programming Interface). Básicamente, una API es un servidor que gracias a unos métodos en su código, nos va a proveer de datos para nuestro uso.</p>
+<p>En nuestro caso, y debido a su simplicidad, vamos a hacer una aplicación que pida datos a una API sobre perros, con la que montaremos un listado y un perfil para el perro.</p>
+<p>Nuestra API es <a href="https://dog.ceo/dog-api/">dogapi</a>.</p>
+<h2 id="conexion-con-la-api">Conexión con la API</h2>
+<p>Para empezar, debemos añadir las dependencias de <a href="http://square.github.io/retrofit/">Retrofit</a>, que es la librería que vamos a usar para la conexión con nuestra API. Retrofit es un cliente HTTP hecho para Java y Android.</p>
+<p><strong><em>build.gradle (Module: app)</em></strong></p>
+<pre><code class="Java">  compile &quot;com.squareup.retrofit2:retrofit:2.3.0&quot;
+  compile &quot;com.squareup.retrofit2:converter-gson:2.3.0&quot;
+</code></pre>
+
+<p>Cuando introducimos código en Gradle, tenemos que volver a sincronizar el código para que los cambios sean efectivos.</p>
+<p>Ahora creamos un nuevo Package llamado API.</p>
+<p><img alt="Screenshot" src="../img/package_api.png" /></p>
+<h2 id="antes-de-retrofit">Antes de Retrofit</h2>
+<p>Tenemos que crear nuestro modelo de datos, que nos servirá para recoger la información del servidor.</p>
+<p>Creamos un Package llamado entities y dentro de él un archivo BreedWrapper.java</p>
+<pre><code class="java">public class BreedWrapper {
+    @SerializedName(&quot;message&quot;)
+    private List&lt;String&gt; breeds;
+}
+</code></pre>
+
+<h2 id="configurando-retrofit">Configurando Retrofit</h2>
+<p>Cuando trabajamos con Retrofit, debemos tener dos archivos básicos. Uno de ellos es una interfaz donde definiremos todos los métodos que usaremos para conectarnos a la API (por ejemplo traer todas las razas de perros o información acerca de una).</p>
+<p>El otro es el cliente, que nos servirá para configurar nuestra conexión con la API y todo lo que le queramos añadir a Retrofit (por ejemplo un Interceptor). Aquí también instanciamos la interfaz para que podamos usar los métodos en nuestro código.</p>
+<p>Creamos nuestra interfaz. La vamos a llamar <strong>DogService.java</strong>.</p>
+<pre><code class="java">public interface DogService {
+    @GET(&quot;breeds/list&quot;)
+    Call&lt;BreedWrapper&gt; getBreeds();
+}
+</code></pre>
+
+<p>Ahora vamos a crear el cliente, <strong><em>DogClient.java</em></strong></p>
+<pre><code class="java">public class DogClient {
+    private Retrofit retrofit;
+    private final static String BASE_URL = &quot;https://dog.ceo/api/&quot;;
+
+    public DogClient(){
+        this.retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
+
+    public DogService getDogService(){
+        return this.retrofit.create(DogService.class);
+    }
+}
+</code></pre>
+
+<p>Con DogService.java estamos creando un "puente" entre nuestra app y la API. Cuando queramos traer todas las razas de perro, solamente tendremos que instanciar esa interfaz y usar el método.</p>
+<p>El cliente, nos sirve para hacer la conexión. Tenemos la url básica de la api <code>https://dog.ceo/api/</code></p>
                 
                   
                 
@@ -296,14 +368,28 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
+          <a href="../vista/" title="Organizar la vista" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Organizar la vista
+              </span>
+            </div>
+          </a>
         
-          <a href="create_project/" title="Crear proyecto" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="../listado/" title="Crear un listado" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Crear proyecto
+                Crear un listado
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -333,10 +419,10 @@
       
     </div>
     
-      <script src="./assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../assets/javascripts/application-f3ab9e5ff8.js"></script>
       
       
-      <script>app.initialize({url:{base:"."}})</script>
+      <script>app.initialize({url:{base:".."}})</script>
       
     
     
