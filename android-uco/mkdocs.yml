@@ -3,5 +3,8 @@ site_name: GDG Córdoba - Android básico
 pages:
   - Inicio: index.md
   - Crear proyecto: create_project.md
+  - Organizar la vista: vista.md
+  - Usando una API externa: api.md
+  - Crear un listado: listado.md
 
 theme: 'material'
