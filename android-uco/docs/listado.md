@@ -1,4 +1,5 @@
 # Crear un listado de elementos
+## Cómo hacer un listado en Android
 
 Para crear una lista de elementos, tenemos varias opciones. Podemos usar *ListView*, *RecyclerView*, o *GridView*.
 

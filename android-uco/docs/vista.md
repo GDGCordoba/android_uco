@@ -1,4 +1,5 @@
 # Organizar la vista
+## Como organizar nuestra vista
 
 Antes de comenzar, debemos saber como están organizadas las vistas en Android.
 
@@ -21,10 +22,11 @@ Si miramos en la preview, nos dará un aviso de que nos falta la dependencia de 
 ```Java
 compile "com.android.support:recyclerview-v7:25.3.1"
 ```
-
+***
 ### Nota
 
 Cuando añadimos una librería a Gradle, la dependencia viene dividida en 3 partes divididas por `:`. La estructura de una dependencia es `nombre-librería:item-librería:version`. Cuando trabajemos con una misma librería e importemos cosas distintas, tenemos que tener cuidado de que hay que importar la misma versión para todas.
+***
 
 El código de nuestra vista puede ser así:
 
@@ -47,7 +49,7 @@ El código de nuestra vista puede ser así:
 </LinearLayout>
 ```
 
-### Crear item de perro
+## Crear item de perro
 
 Una vez que tenemos configurado el contenedor del listado, ahora tenemos que crear los items que vamos a mostrar. Como quedan muy curiosos, vamos a hacer CardViews, que son tarjetas implementadas por Android con la librería de [Material Design](https://material.io/guidelines/).
 

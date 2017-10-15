@@ -1,4 +1,5 @@
 # Usando una API externa
+## Qué es una API
 
 Una API es una Interfaz de Programación de Aplicaciones (Application Programming Interface). Básicamente, una API es un servidor que gracias a unos métodos en su código, nos va a proveer de datos para nuestro uso.
 
@@ -53,6 +54,8 @@ public interface DogService {
 }
 ```
 
+Con DogService.java estamos creando un "puente" entre nuestra app y la API. Cuando queramos traer todas las razas de perro, solamente tendremos que instanciar esa interfaz y usar el método.
+
 Ahora vamos a crear el cliente, ***DogClient.java***
 
 ```java
@@ -72,6 +75,7 @@ public class DogClient {
     }
 }
 ```
-Con DogService.java estamos creando un "puente" entre nuestra app y la API. Cuando queramos traer todas las razas de perro, solamente tendremos que instanciar esa interfaz y usar el método.
 
-El cliente, nos sirve para hacer la conexión. Tenemos la url básica de la api `https://dog.ceo/api/`
+El cliente, nos sirve para hacer la conexión. Tenemos la url básica de la api `https://dog.ceo/api/` a la que concatenaremos los métodos que querremos usar. Además, debemos crear una instancia de Retrofit en nuestro constructor, indicándole la URL base y que queremos que GSON convierta los objetos JSON a objetos de Java.
+
+Por último, declaramos un método que nos dará una instancia del servicio, con el que podremos llamar a nuestra API.
