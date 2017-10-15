@@ -37,12 +37,12 @@ El código de nuestra vista puede ser así:
     android:layout_height="match_parent"
     tools:context="com.example.david.ucoexample.MainActivity">
 
-    <android.support.v7.app.AlertController.RecycleListView
-        android:id="@+id/dogList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+  <android.support.v7.widget.RecyclerView
+       android:id="@+id/dogList"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
 
-    </android.support.v7.app.AlertController.RecycleListView>
+  </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
 ```
@@ -71,8 +71,9 @@ Una vez añadida, la estructura básica de nuestro layout sería:
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="8dp"
     android:layout_width="match_parent"
-    android:layout_height="200dp">
+    android:layout_height="100dp">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -81,7 +82,7 @@ Una vez añadida, la estructura básica de nuestro layout sería:
 
         <ImageView
             android:src="@drawable/dog"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="match_parent" />
 
         <TextView

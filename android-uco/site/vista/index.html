@@ -16,7 +16,7 @@
     
     
       
-        <title>Organizar la vista - GDG Córdoba - Android básico</title>
+        <title>Nuestra primera vista - GDG Córdoba - Android básico</title>
       
     
     
@@ -74,7 +74,7 @@
             
               
             
-            Organizar la vista
+            Nuestra primera vista
           
         </span>
       </div>
@@ -159,20 +159,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="Organizar la vista" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="./" title="Organizar la vista" class="md-nav__link">
       Organizar la vista
     </a>
-    
   </li>
 
     
@@ -200,6 +191,98 @@
   </li>
 
     
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Nuestra primera vista
+      </label>
+    
+    <a href="./" title="Nuestra primera vista" class="md-nav__link md-nav__link--active">
+      Nuestra primera vista
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#listado-de-razas-de-perro" title="Listado de razas de perro" class="md-nav__link">
+    Listado de razas de perro
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nota" title="Nota" class="md-nav__link">
+    Nota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-item-de-perro" title="Crear item de perro" class="md-nav__link">
+    Crear item de perro
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../inflando_vista/" title="Inflando la vista" class="md-nav__link">
+      Inflando la vista
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../pidiendo_datos/" title="Haciendo una petición al servidor" class="md-nav__link">
+      Haciendo una petición al servidor
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -216,6 +299,40 @@
   
     
   
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#listado-de-razas-de-perro" title="Listado de razas de perro" class="md-nav__link">
+    Listado de razas de perro
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nota" title="Nota" class="md-nav__link">
+    Nota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-item-de-perro" title="Crear item de perro" class="md-nav__link">
+    Crear item de perro
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -234,6 +351,76 @@
 <p>Hay distintas formas de organizar nuestro layout. Android cuenta con una serie de contenedores que agrupará en contenido, y en ellos será donde coloquemos nuestros elementos de <strong>UI</strong> (<em>User Interface</em>).</p>
 <p>Podemos tener un diseño linar (<strong>LinearLayout</strong>) que colocará los elementos uno detrás de otro, bien de forma horizontal o de forma vertical. Podemos organizar nuestros elementos como en una tabla o grid (Google Fotos) con <strong>GridLayout</strong> o <strong>TableLayout</strong>. Hay layouts especiales para mostrar un fragment (<strong>FrameLayout</strong>). Por último, podemos colocar nuestros elementos de forma relativa, algo así como se hace en web, con <strong>RelativeLayout</strong>.</p>
 <p><img alt="Screenshot" src="../img/layouts.jpg" /></p>
+<h2 id="listado-de-razas-de-perro">Listado de razas de perro</h2>
+<p>Una vez abramos nuestro activity_main.xml veremos que tenemos un ConstraintLayout y dentro de él un TextView con un texto de ejemplo.</p>
+<p>Como no vamos a usar nada de constraints, cambiamos este por un LinearLayout, borramos el TextView y añadimos un RecyclerView.</p>
+<p>Si miramos en la preview, nos dará un aviso de que nos falta la dependencia de RecyclerView, así que vamos al build.gradle de app y añadimos la siguiente línea:</p>
+<pre><code class="Java">compile &quot;com.android.support:recyclerview-v7:25.3.1&quot;
+</code></pre>
+
+<h3 id="nota">Nota</h3>
+<p>Cuando añadimos una librería a Gradle, la dependencia viene dividida en 3 partes divididas por <code>:</code>. La estructura de una dependencia es <code>nombre-librería:item-librería:version</code>. Cuando trabajemos con una misma librería e importemos cosas distintas, tenemos que tener cuidado de que hay que importar la misma versión para todas.</p>
+<p>El código de nuestra vista puede ser así:</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    tools:context=&quot;com.example.david.ucoexample.MainActivity&quot;&gt;
+
+  &lt;android.support.v7.widget.RecyclerView
+       android:id=&quot;@+id/dogList&quot;
+       android:layout_width=&quot;match_parent&quot;
+       android:layout_height=&quot;match_parent&quot;&gt;
+
+  &lt;/android.support.v7.widget.RecyclerView&gt;
+
+&lt;/LinearLayout&gt;
+</code></pre>
+
+<h3 id="crear-item-de-perro">Crear item de perro</h3>
+<p>Una vez que tenemos configurado el contenedor del listado, ahora tenemos que crear los items que vamos a mostrar. Como quedan muy curiosos, vamos a hacer CardViews, que son tarjetas implementadas por Android con la librería de <a href="https://material.io/guidelines/">Material Design</a>.</p>
+<p>Para crear un nuevo layout, hacemos click derecho sobre <strong>res/layout</strong> y vamos a <strong>New/Layout resource file</strong>.
+Como nombre le pondremos <strong>item_dog</strong>. En cuant a nomemclatura, en Android se suele poner primero si es item o algún tipo de vista (activity, fragment) seguido de una barra baja y un nombre identificativo.</p>
+<p><img alt="Screenshot" src="../img/create_layout_1.png" />
+<img alt="Screenshot" src="../img/create_layout_2.png" /></p>
+<p>Una vez tengramos creado nuestro layout, es hora de implementar nuestra primera CardView. Una card de Material es una hora que sirve como punto de entrada a información. En nuestro caso lo vamos a usar para listar razas de perro, que aunque es un listado sencillo y sólo tendremos el nombre de la raza, vamos a intentar que destaque de alguna manera.</p>
+<p>Antes de nada, hay que ir a añadir su dependencia:</p>
+<pre><code class="Java">compile &quot;com.android.support:cardview-v7:25.3.1&quot;
+</code></pre>
+
+<p>Una vez añadida, la estructura básica de nuestro layout sería:</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;android.support.v7.widget.CardView
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:layout_margin=&quot;8dp&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;100dp&quot;&gt;
+
+    &lt;LinearLayout
+        android:orientation=&quot;horizontal&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;&gt;
+
+        &lt;ImageView
+            android:src=&quot;@drawable/dog&quot;
+            android:layout_width=&quot;100dp&quot;
+            android:layout_height=&quot;match_parent&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/dogBreedName&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot; /&gt;
+
+    &lt;/LinearLayout&gt;
+&lt;/android.support.v7.widget.CardView&gt;
+</code></pre>
+
+<p>Como puedes ver, hemos puesto una CardView que a fin de cuentas es un contenedor del contenido interior. Dentro tenemos un LinearLayout horizontal, que tendrá dos items, una imagen y un texto.</p>
+<p>Para la imagen vamos a usar una estática</p>
+<p><img alt="Screenshot" src="../img/dog.png" /></p>
+<p>Debemos añadir la imagen en <strong>res/drawable</strong> y le ponemos el nombre <strong>dog.png</strong>.</p>
                 
                   
                 
@@ -252,7 +439,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../create_project/" title="Crear proyecto" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../listado/" title="Crear un listado" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -261,19 +448,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Crear proyecto
+                Crear un listado
               </span>
             </div>
           </a>
         
         
-          <a href="../api/" title="Usando una API externa" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../inflando_vista/" title="Inflando la vista" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Usando una API externa
+                Inflando la vista
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

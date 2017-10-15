@@ -31,6 +31,10 @@ Creamos un Package llamado entities y dentro de él un archivo BreedWrapper.java
 public class BreedWrapper {
     @SerializedName("message")
     private List<String> breeds;
+
+    public List<String> getBreeds() {
+        return breeds;
+    }
 }
 ```
 

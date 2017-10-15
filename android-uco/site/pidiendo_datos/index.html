@@ -16,7 +16,7 @@
     
     
       
-        <title>Crear proyecto - GDG Córdoba - Android básico</title>
+        <title>Haciendo una petición al servidor - GDG Córdoba - Android básico</title>
       
     
     
@@ -74,7 +74,7 @@
             
               
             
-            Crear proyecto
+            Haciendo una petición al servidor
           
         </span>
       </div>
@@ -147,20 +147,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="Crear proyecto" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../create_project/" title="Crear proyecto" class="md-nav__link">
       Crear proyecto
     </a>
-    
   </li>
 
     
@@ -228,11 +219,54 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../pidiendo_datos/" title="Haciendo una petición al servidor" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Haciendo una petición al servidor
+      </label>
+    
+    <a href="./" title="Haciendo una petición al servidor" class="md-nav__link md-nav__link--active">
       Haciendo una petición al servidor
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ups" title="Ups!" class="md-nav__link">
+    Ups!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rellenando-el-recyclerview" title="Rellenando el RecyclerView" class="md-nav__link">
+    Rellenando el RecyclerView
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -253,6 +287,27 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ups" title="Ups!" class="md-nav__link">
+    Ups!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rellenando-el-recyclerview" title="Rellenando el RecyclerView" class="md-nav__link">
+    Rellenando el RecyclerView
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -264,41 +319,88 @@
               
                 
                 
-                <h1 id="creacion-de-un-proyecto">Creación de un proyecto</h1>
-<p>Abrimos Android Studio y pulsamos en <strong>Start a new Android Studio project</strong></p>
-<p><img alt="Screenshot" src="../img/create_project_1.png" /></p>
-<p>Introducimos el nombre de nuestro proyecto, en nuestro caso <strong>UCOExample</strong></p>
-<p><img alt="Screenshot" src="../img/create_project_2.png" /></p>
-<p>Ahora tenemos que elegir el SDK mínimo con el que vamos a desarrollar la app. En nuestro caso vamos a usar <strong>19</strong>, que es soportada por el 90,1% de los dispositivos actualmente.</p>
-<p>Cómo vamos a hacer una app móvil, sólo tenemos que marcar la opción de <strong>Phone and Tablet</strong>.</p>
-<p><img alt="Screenshot" src="../img/create_project_3.png" /></p>
-<p>Android Studio nos proponer ahora una serie de actividades iniciales. Podemos elegir varias, cómo por ejemplo una con un <strong>FAB</strong> (Floating Action Button), una con una barra de navegación inferior, o incluso una actividad con mapa. Por experiencia, es más recomendable usar una actividad vacía y así controlamos el código que vamos generando.</p>
-<p>En nuestro caso y cómo vamos a hacer una aplicación desde cero, elegimos <strong>Empty Activity</strong>.</p>
-<p><img alt="Screenshot" src="../img/create_project_4.png" /></p>
-<p>Por último, ahora nos toca ponerle un nombre a la actividad, dejaremos el que viene por defecto ya que si en cualquier momento nos hace falta cambiarlo podemos hacerlo con la opción de <strong>Refactor</strong> que incluye el IDE.</p>
-<p>Tenemos que tener en cuenta antes de finalizar, que queremos que AS nos genere el archivo de layout correspondiente a la actividad. Dependiendo del nombre que le demos cogerá el nombre y le añadirá activity.</p>
-<p><img alt="Screenshot" src="../img/create_project_5.png" /></p>
-<p>Una vez hayamos escrito el nombre que queramos que tenga nuestro layout, pulsamos en <strong>Aceptar</strong> y AS empezará a generar nuestro proyecto.</p>
-<p>Una vez que AS termine de indexar todo el proyecto, ya podemos comenzar.</p>
-<h1 id="lanzar-la-aplicacion">Lanzar la aplicación</h1>
-<p>Para lanzar la aplicación, lo primero que debemos hacer es comprobar esta parte de Android Studio.</p>
-<p><img alt="Screenshot" src="../img/launch_app_1.png" /> <img alt="Screenshot" src="../img/launch_app_2.png" /></p>
-<p>En orden, los tres botones coloreados son:</p>
+                <h1 id="haciendo-una-peticion-al-servidor">Haciendo una petición al servidor</h1>
+<p>Vamos a nuestra actividad, y vamos a comenzar a traer datos de la api. Para empezar, debemos asignar un objeto de cliente Retrofit que hemos creado en anteriores pasos:</p>
+<pre><code class="Java">  private DogClient client;
+</code></pre>
+
+<p>Vamos a crear un constructor, donde vamos a instanciar el objeto:</p>
+<pre><code class="Java">public MainActivity() {
+    client = new DogClient();
+}
+</code></pre>
+
+<p>Y ahora en nuestro método <strong>getDogBreeds</strong> hacemos la petición con Retrofit:</p>
+<pre><code class="Java">private void getDogBreeds() {
+    client.getDogService().getBreeds().enqueue(new Callback&lt;BreedWrapper&gt;() {
+        @Override
+        public void onResponse(Call&lt;BreedWrapper&gt; call, Response&lt;BreedWrapper&gt; response) {
+
+        }
+
+        @Override
+        public void onFailure(Call&lt;BreedWrapper&gt; call, Throwable t) {
+
+        }
+    });
+}
+</code></pre>
+
+<p>Como se puede ver, tenemos dos métodos internos. Uno es <strong>onResponse</strong> que se dispará cuando la llamada sea éxito (da igual si el código HTTP es 200 o 404) y la otra cuando falle por alguna razón como que la url no es válida o no tenemos red.</p>
+<p>Ahora vamos a nuestro método <strong>onCreate()</strong> y añadimos la llamada a nuestro método:</p>
+<pre><code class="Java">@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    ButterKnife.bind(this);
+
+    getDogBreeds();
+}
+</code></pre>
+
+<p>Cuando lo tengamos, lanzamos la app en nuestro dispositivo o simulador.</p>
+<h2 id="ups">Ups!</h2>
+<p>Tenemos un fallo! Cuando vamos a realizar según que acciones, tenemos que habilitar permisos o hacer que el usuario nos habilite. En este caso, nos falta el permiso de red, así que para poder habilitarlo vamos a nuestro <strong>AndroidManifest.xml</strong> y añadimos la siguiente línea justo encima del tag <application>.</p>
+<pre><code class="xml">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+</code></pre>
+
+<p>Si ahora volvemos a lanzar la app, ya no nos dará el fallo.</p>
+<h2 id="rellenando-el-recyclerview">Rellenando el RecyclerView</h2>
+<p>Primero, debemos declarar el objeto del adapter:</p>
+<pre><code class="Java">  private DogListAdapter adapter;
+</code></pre>
+
+<p>Y lo instanciamos en el método de <strong>setAdapter</strong></p>
+<pre><code class="Java">private void setAdapter() {
+    adapter = new DogListAdapter();
+}
+</code></pre>
+
+<p>También tenemos que instanciar el RecyclerView:</p>
+<pre><code class="Java">private void setRecyclerView() {
+    dogList.setLayoutManager(new LinearLayoutManager(this));
+    dogList.setAdapter(adapter);
+}
+</code></pre>
+
+<p>Hay dos parámetros básicos:</p>
 <ul>
-<li>Lanzar la aplicación en el emulador.</li>
-<li>Lanzar la aplicación en modo debug.</li>
-<li>AVD Manager.</li>
+<li>
+<p><strong>Layout Manager</strong>: básicamente es como el RecyclerView va a mostrar los datos. En nuestro caso queremos un listado linear (por defecto es vertical), pero puede ser un GridLayout o incluso en varias columnas.</p>
+</li>
+<li>
+<p><strong>Adaptador</strong>: es el adaptador que le va a proveer los datos para mostrar.</p>
+</li>
 </ul>
-<h1 id="configurar-el-emulador">Configurar el emulador</h1>
-<p>Si no tenemos un emulador configurado, pulsamos primero en el botón de <strong>AVD Manager</strong>.</p>
-<p>Nos aparecerá una ventana con el listado de emuladores instalados en nuestro sistema.</p>
-<p><img alt="Screenshot" src="../img/create_emu_1.png" /></p>
-<p>Para crear uno, pulsamos el botón de <strong>Create Virtual Device</strong> situado abajo a la izquierda.</p>
-<p>Ahora nos saldrá una ventana con un listado de móviles y tablets que podemos elegir para emular. En nuestro caso vamos a crear un emulador para un <strong>Google Pixel XL</strong>.</p>
-<p><img alt="Screenshot" src="../img/create_emu_2.png" /></p>
-<p>Pulsamos en <strong>Next</strong> y ahora hay que elegir el sistema operativo del móvil. En nuestro caso vamos a elegir Marshmallow (Android 6.0). Por último elegimos el nombre de nuestro emulador y AS nos informa de los datos del mismo.</p>
-<p>Una vez creado el emulador, sólo tenemos que pulsar en el botón de lanzar la app, elegir el móvil al que queremos lanzar la aplicación y esperar a que arranque.</p>
-<p><img alt="Screenshot" src="../img/create_emu_3.png" /></p>
+<p>Por último, queda añadir en el <strong>onResponse</strong> lo que queremos hacer:</p>
+<pre><code class="Java">@Override
+public void onResponse(Call&lt;BreedWrapper&gt; call, Response&lt;BreedWrapper&gt; response) {
+    adapter.setDogBreeds(response.body().getBreeds());
+}
+</code></pre>
+
+<p>Si lanzamos la app nos debe de salir una primera versión de nuestro listado.</p>
+<p><img alt="Screenshot" src="../img/listado_1.png" /></p>
                 
                   
                 
@@ -317,7 +419,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Inicio" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../inflando_vista/" title="Inflando la vista" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -326,25 +428,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Inicio
+                Inflando la vista
               </span>
             </div>
           </a>
         
-        
-          <a href="../vista/" title="Organizar la vista" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Organizar la vista
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>

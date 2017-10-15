@@ -1,0 +1,609 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+    
+    
+      
+        <title>Inflando la vista - GDG Córdoba - Android básico</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-a20f419c8e.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="GDG Córdoba - Android básico" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon md-icon--home"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Inflando la vista
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        <i class="md-icon md-icon--home"></i>
+      
+    </div>
+    GDG Córdoba - Android básico
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Inicio" class="md-nav__link">
+      Inicio
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../create_project/" title="Crear proyecto" class="md-nav__link">
+      Crear proyecto
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../vista/" title="Organizar la vista" class="md-nav__link">
+      Organizar la vista
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="Usando una API externa" class="md-nav__link">
+      Usando una API externa
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../listado/" title="Crear un listado" class="md-nav__link">
+      Crear un listado
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../vista/" title="Nuestra primera vista" class="md-nav__link">
+      Nuestra primera vista
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Inflando la vista
+      </label>
+    
+    <a href="./" title="Inflando la vista" class="md-nav__link md-nav__link--active">
+      Inflando la vista
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declarar-el-adapter" title="Declarar el adapter" class="md-nav__link">
+    Declarar el adapter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rellenar-el-adapter-con-datos" title="Rellenar el Adapter con datos" class="md-nav__link">
+    Rellenar el Adapter con datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignando-el-layout-al-adapter" title="Asignando el layout al adapter" class="md-nav__link">
+    Asignando el layout al adapter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignando-los-datos" title="Asignando los datos" class="md-nav__link">
+    Asignando los datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../pidiendo_datos/" title="Haciendo una petición al servidor" class="md-nav__link">
+      Haciendo una petición al servidor
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#declarar-el-adapter" title="Declarar el adapter" class="md-nav__link">
+    Declarar el adapter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rellenar-el-adapter-con-datos" title="Rellenar el Adapter con datos" class="md-nav__link">
+    Rellenar el Adapter con datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignando-el-layout-al-adapter" title="Asignando el layout al adapter" class="md-nav__link">
+    Asignando el layout al adapter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignando-los-datos" title="Asignando los datos" class="md-nav__link">
+    Asignando los datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="inflando-la-vista">Inflando la vista</h1>
+<p>¿Que significa inflar la vista? Básicamente es rellenar nuestros layouts con datos. Los datos que vamos a mostrar son las razas de perro que nos traeremos con Retrofit.</p>
+<p>Vamos a nuestra actividad y creamos las siguientes funciones:</p>
+<pre><code class="Java">private void setAdapter(){
+  //aqui configuraremos el adaptador de nuestros datos
+}
+
+private void setRecyclerView(){
+  //aqui inicializaremos nuestro recyclerview
+}
+
+private void getDogBreeds(){
+  //desde aquí llamaremos al servidor y traeremos los datos
+}
+</code></pre>
+
+<p>Para poder inicializar el <strong>RecyclerView</strong>, tenemos que hacer un <strong>binding</strong>. Un binding es hacer referencia al layout desde nuestra clase Java. Tenemos una forma nativa del SDK que puede resultar bastante tediosa.</p>
+<pre><code class="Java">  private RecyclerView recyclerView;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState){
+    ...
+
+    recyclerView = (RecyclerView) findViewById(R.id.dogList);
+  }
+</code></pre>
+
+<p>Otra forma, mucho más sencilla, es hacerlo con <a href="http://jakewharton.github.io/butterknife/">Butterknife</a>. Con Butterknife nos ahorramos hacer el <code>findViewById()</code> y si instalamos el plugin correspondiente en Android Studio no tenemos que llegar a escribir nada.</p>
+<p>Para instalar Butterknife, añadimos la dependencia:</p>
+<pre><code class="Java">compile 'com.jakewharton:butterknife:8.8.1'
+annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+</code></pre>
+
+<p>Una vez añadida la dependencia, debemos dejar la clase así:</p>
+<pre><code class="Java">public class MainActivity extends AppCompatActivity {
+
+    @BindView(R.id.dogList)
+    RecyclerView dogList;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+    }
+
+    private void setAdapter() {
+
+    }
+
+    private void setRecyclerView() {
+
+    }
+
+    private void getDogBreeds() {
+
+    }
+}
+</code></pre>
+
+<p>Como véis, es necesario hacer <code>ButterKnife.bind(this);</code> justo después de hacer el <code>setContentView()</code>. Esto es así ya que con ese método, Butterknife hace por su cuenta los <code>findViewById()</code>.</p>
+<h2 id="declarar-el-adapter">Declarar el adapter</h2>
+<p>Un adapter es una clase intermedia entre nuestro layout y los datos. Nos ayuda a distribuir la información en el layout y lo administra internamente. Si tenemos un listado muy grande, el Adapter irá creando cada item del listado y reciclando los que ya no se ven en pantalla. Se encarga de, a partir de un array de datos, setear los textos, imágenes, colores o cualquier cosa que queramos editar en nuestros layouts.</p>
+<p>Para crear el adaptador, creamos un nuevo package llamado <strong>adapter</strong> y dentro de él creamos una nueva clase de Java llamada <strong>DogListAdapter.java</strong>.</p>
+<p>Para que una clase de Java sea un adaptador, debe heredar de <code>RecyclerView.Adapter&lt;&gt;</code> e implementar un ViewHolder. Un ViewHolder es la clase del elemento que estamos mostrando. En nuestro caso, nuestro ViewHolder será una clase con un campo <code>String</code> que será la raza de perro que estemos mostrando.</p>
+<p>Nuestra clase se quedará así:</p>
+<pre><code class="Java">public class DogListAdapter extends RecyclerView.Adapter&lt;DogListAdapter.ViewHolder&gt; {
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return null;
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
+
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        public ViewHolder(View itemView) {
+            super(itemView);
+        }
+    }
+}
+</code></pre>
+
+<p>Todos esos métodos son obligatorios implementarlos:</p>
+<ul>
+<li>
+<p><strong>onCreateViewHolder</strong>: este método se dispara cuando el adaptador va a crear un item. Aquí normalmente lo que hacemos es decirle al adaptador qué layout debe usar para mostrar en pantalla.</p>
+</li>
+<li>
+<p><strong>onBindViewHolder</strong>: aquí, el elemento ya está creado, pero está vacío. Nos sirve para setear los datos que queremos mostrar, o asignar los eventos de onClick o alguna cosa que necesitemos.</p>
+</li>
+<li>
+<p><strong>getItemCount</strong>: este método es super importante, ya que aquí el adaptador sabe cuantas veces debe disparar los dos métodos de arriba. Si nos equivocamos y siempre retorna 0, nunca se nos mostrará nada en pantalla. Normalmente, lo que se hace es crear un array interno de elementos, setear los valores a ese array y luego retornar aquí su tamaño.</p>
+</li>
+<li>
+<p><strong>Clase ViewHolder</strong>: como hemos dicho, es una clase que nos sirve para bindear los campos que vamos a mostrar en pantalla.</p>
+</li>
+</ul>
+<h3 id="rellenar-el-adapter-con-datos">Rellenar el Adapter con datos</h3>
+<p>Lo primero de todo, necesitamos un array de string para guardar las razas de perro.</p>
+<pre><code class="Java">private List&lt;String&gt; dogBreeds;
+</code></pre>
+
+<p>Y creamos un método para poder insertar los datos desde la actividad, que es donde los vamos a traer.</p>
+<pre><code class="Java">public void setDogBreeds(List&lt;String&gt; dogBreedsArray){
+    this.dogBreeds = dogBreedsArray;
+    this.notifyDataSetChanged();
+}
+</code></pre>
+
+<p>La llamada <code>this.notifyDataSetChanged()</code> nos sirve para reiniciar el adapter, y que se vuelvan a disparar los métodos de <strong>onCreateViewHolder</strong> y <strong>onBindViewHolder</strong>.</p>
+<p>También tenemos que cambiar el método <strong>getItemCount</strong> para que retorne el tamaño de ese array y no 0.</p>
+<pre><code class="Java">@Override
+public int getItemCount() {
+    return this.dogBreeds.size();
+}
+</code></pre>
+
+<h3 id="asignando-el-layout-al-adapter">Asignando el layout al adapter</h3>
+<p>Debemos cambiar el método <strong>onCreateViewHolder</strong> y dejarlo asi:</p>
+<pre><code class="Java">@Override
+public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_dog, parent, false);
+
+    return new ViewHolder(view);
+}
+</code></pre>
+
+<p>Estamos usando la clase <strong>LayoutInflater</strong> para coger el layout que hemos hecho antes de <strong>item_dog</strong> y asignarselo al item que estamos creando.</p>
+<h3 id="asignando-los-datos">Asignando los datos</h3>
+<p>Usando ButterKnife, debemos añadir al ViewHolder el campo de TextView que antes hemos creado en el layout.</p>
+<pre><code class="Java">public class ViewHolder extends RecyclerView.ViewHolder {
+
+    //seteamos el valor aquí
+    @BindView(R.id.dogBreedName)
+    TextView dogBreedName;
+
+    private View view;
+
+    public ViewHolder(View itemView) {
+        super(itemView);
+        ButterKnife.bind(this, itemView);
+        this.view = itemView;
+    }
+}
+</code></pre>
+
+<p>Ahora en <strong>onBindViewHolder</strong> rellenamos el TextView con el valor que corresponda:</p>
+<pre><code class="Java">@Override
+public void onBindViewHolder(ViewHolder holder, int position) {
+    holder.dogBreedName.setText(this.dogBreeds.get(position));
+}
+</code></pre>
+
+<p>Por último, nos queda declarar en el constructor el array vacío, para que no tengamos un error al asignar valores a algo que está a null (NullPointerException)</p>
+<pre><code class="Java">public DogListAdapter() {
+    this.dogBreeds = new ArrayList&lt;&gt;();
+}
+</code></pre>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../vista/" title="Nuestra primera vista" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Nuestra primera vista
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../pidiendo_datos/" title="Haciendo una petición al servidor" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Haciendo una petición al servidor
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

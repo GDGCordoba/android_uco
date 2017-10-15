@@ -7,5 +7,7 @@ pages:
   - Usando una API externa: api.md
   - Crear un listado: listado.md
   - Nuestra primera vista: vista.md
+  - Inflando la vista: inflando_vista.md
+  - Haciendo una petición al servidor: pidiendo_datos.md
 
 theme: 'material'
