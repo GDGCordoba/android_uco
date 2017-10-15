@@ -6,5 +6,6 @@ pages:
   - Organizar la vista: vista.md
   - Usando una API externa: api.md
   - Crear un listado: listado.md
+  - Nuestra primera vista: vista.md
 
 theme: 'material'
