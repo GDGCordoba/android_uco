@@ -1,4 +1,5 @@
 # Creación de un proyecto
+## Creando un nuevo proyecto
 
 Abrimos Android Studio y pulsamos en **Start a new Android Studio project**
 
@@ -30,7 +31,7 @@ Una vez hayamos escrito el nombre que queramos que tenga nuestro layout, pulsamo
 
 Una vez que AS termine de indexar todo el proyecto, ya podemos comenzar.
 
-# Lanzar la aplicación
+## Lanzar la aplicación
 
 Para lanzar la aplicación, lo primero que debemos hacer es comprobar esta parte de Android Studio.
 
@@ -42,7 +43,7 @@ En orden, los tres botones coloreados son:
   * Lanzar la aplicación en modo debug.
   * AVD Manager.
 
-# Configurar el emulador
+## Configurar el emulador
 
 Si no tenemos un emulador configurado, pulsamos primero en el botón de **AVD Manager**.
 

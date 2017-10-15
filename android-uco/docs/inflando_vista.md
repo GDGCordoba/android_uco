@@ -1,4 +1,5 @@
 # Inflando la vista
+## Qué es inflar una vista
 
 ¿Que significa inflar la vista? Básicamente es rellenar nuestros layouts con datos. Los datos que vamos a mostrar son las razas de perro que nos traeremos con Retrofit.
 
@@ -118,7 +119,7 @@ Todos esos métodos son obligatorios implementarlos:
 
 * **Clase ViewHolder**: como hemos dicho, es una clase que nos sirve para bindear los campos que vamos a mostrar en pantalla.
 
-### Rellenar el Adapter con datos
+## Rellenar el Adapter con datos
 
 Lo primero de todo, necesitamos un array de string para guardar las razas de perro.
 
@@ -146,7 +147,7 @@ public int getItemCount() {
 }
 ```
 
-### Asignando el layout al adapter
+## Asignando el layout al adapter
 
 Debemos cambiar el método **onCreateViewHolder** y dejarlo asi:
 
@@ -161,7 +162,7 @@ public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 Estamos usando la clase **LayoutInflater** para coger el layout que hemos hecho antes de **item_dog** y asignarselo al item que estamos creando.
 
-### Asignando los datos
+## Asignando los datos
 
 Usando ButterKnife, debemos añadir al ViewHolder el campo de TextView que antes hemos creado en el layout.
 

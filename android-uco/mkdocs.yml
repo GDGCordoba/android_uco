@@ -9,5 +9,13 @@ pages:
   - Nuestra primera vista: vista.md
   - Inflando la vista: inflando_vista.md
   - Haciendo una petición al servidor: pidiendo_datos.md
+  - Abrir una nueva actividad: nueva_actividad.md
 
 theme: 'material'
+site_favicon: 'img/favicon.ico'
+
+extra:
+  logo: 'img/logo.png'
+
+repo_name: 'GDGCordoba/android_uco'
+repo_url: 'https://github.com/GDGCordoba/android_uco.github.io.git'

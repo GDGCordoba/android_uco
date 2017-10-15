@@ -1,4 +1,5 @@
 # Haciendo una petición al servidor
+## Usando Retrofit para pedir datos
 
 Vamos a nuestra actividad, y vamos a comenzar a traer datos de la api. Para empezar, debemos asignar un objeto de cliente Retrofit que hemos creado en anteriores pasos:
 
@@ -49,7 +50,8 @@ protected void onCreate(Bundle savedInstanceState) {
 
 Cuando lo tengamos, lanzamos la app en nuestro dispositivo o simulador.
 
-## Ups!
+***
+### Ups!
 
 Tenemos un fallo! Cuando vamos a realizar según que acciones, tenemos que habilitar permisos o hacer que el usuario nos habilite. En este caso, nos falta el permiso de red, así que para poder habilitarlo vamos a nuestro **AndroidManifest.xml** y añadimos la siguiente línea justo encima del tag <application>.
 
@@ -58,6 +60,7 @@ Tenemos un fallo! Cuando vamos a realizar según que acciones, tenemos que habil
 ```
 
 Si ahora volvemos a lanzar la app, ya no nos dará el fallo.
+***
 
 ## Rellenando el RecyclerView
 
