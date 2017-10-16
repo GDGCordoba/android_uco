@@ -20,7 +20,7 @@ Primero, vamos a crear una interfaz llamada **onClickOnItem**.
 
 Las interfaces sirven como contratos para que una clase implemente ciertas funciones. Nos sirve para definir como interactuar con las clases en caso de que hagamos una librería o pueden servirnos para ordenar nuestro propio código, ya que obligamos a que nuestra clase cumpla una determinada especificación de requisitos.
 
-Una interfaz simplemente lista funciones, que a su vez serán implementadas por una clase. Hay que tener cuidado y hacer las interfaces lo más básicas posibles, ya que sino podemos tener funciones vacías en nuestra clase que no nos sirven para nada (violación del Principio de Liskov).
+Una interfaz simplemente lista funciones, que a su vez serán implementadas por una clase. Hay que tener cuidado y hacer las interfaces lo más básicas posibles, ya que sino podemos tener funciones vacías en nuestra clase que no nos sirven para nada (violación del Principio Segregacion de interfaces).
 
 En nuestra interfaz, vamos a definir un método llamado **onClickBreed()**
 
