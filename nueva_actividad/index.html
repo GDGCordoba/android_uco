@@ -225,6 +225,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../constantes/" title="Usando constantes como recursos" class="md-nav__link">
+      Usando constantes como recursos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../api/" title="Usando una API externa" class="md-nav__link">
       Usando una API externa
     </a>
@@ -544,7 +556,7 @@
 <p>Primero, vamos a crear una interfaz llamada <strong>onClickOnItem</strong>.</p>
 <h3 id="por-que-usamos-interfaces">¿Por qué usamos interfaces?</h3>
 <p>Las interfaces sirven como contratos para que una clase implemente ciertas funciones. Nos sirve para definir como interactuar con las clases en caso de que hagamos una librería o pueden servirnos para ordenar nuestro propio código, ya que obligamos a que nuestra clase cumpla una determinada especificación de requisitos.</p>
-<p>Una interfaz simplemente lista funciones, que a su vez serán implementadas por una clase. Hay que tener cuidado y hacer las interfaces lo más básicas posibles, ya que sino podemos tener funciones vacías en nuestra clase que no nos sirven para nada (violación del Principio de Liskov).</p>
+<p>Una interfaz simplemente lista funciones, que a su vez serán implementadas por una clase. Hay que tener cuidado y hacer las interfaces lo más básicas posibles, ya que sino podemos tener funciones vacías en nuestra clase que no nos sirven para nada (violación del Principio Segregacion de interfaces).</p>
 <p>En nuestra interfaz, vamos a definir un método llamado <strong>onClickBreed()</strong></p>
 <pre><code class="Java">public interface OnClickOnItem {
     public void onClickBreed();
