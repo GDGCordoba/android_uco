@@ -16,7 +16,7 @@
     
     
       
-        <title>Usando una API externa - GDG Córdoba - Android básico</title>
+        <title>Usando constantes como recursos - GDG Córdoba - Android básico</title>
       
     
     
@@ -78,7 +78,7 @@
             
               
             
-            Usando una API externa
+            Usando constantes como recursos
           
         </span>
       </div>
@@ -223,18 +223,6 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../constantes/" title="Usando constantes como recursos" class="md-nav__link">
-      Usando constantes como recursos
-    </a>
-  </li>
-
-    
-      
-      
-      
-
   
 
 
@@ -246,11 +234,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Usando una API externa
+        Usando constantes como recursos
       </label>
     
-    <a href="./" title="Usando una API externa" class="md-nav__link md-nav__link--active">
-      Usando una API externa
+    <a href="./" title="Usando constantes como recursos" class="md-nav__link md-nav__link--active">
+      Usando constantes como recursos
     </a>
     
       
@@ -264,29 +252,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-una-api" title="Qué es una API" class="md-nav__link">
-    Qué es una API
+  <a href="#por-que-usar-constantes" title="¿Por qué usar constantes?" class="md-nav__link">
+    ¿Por qué usar constantes?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conexion-con-la-api" title="Conexión con la API" class="md-nav__link">
-    Conexión con la API
+  <a href="#tipos-de-recursos" title="Tipos de recursos" class="md-nav__link">
+    Tipos de recursos
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#antes-de-retrofit" title="Antes de Retrofit" class="md-nav__link">
-    Antes de Retrofit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-retrofit" title="Configurando Retrofit" class="md-nav__link">
-    Configurando Retrofit
+  <a href="#cambia-tus-colores" title="Cambia tus colores" class="md-nav__link">
+    Cambia tus colores
   </a>
   
 </li>
@@ -297,6 +278,18 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="Usando una API externa" class="md-nav__link">
+      Usando una API externa
+    </a>
   </li>
 
     
@@ -381,29 +374,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-una-api" title="Qué es una API" class="md-nav__link">
-    Qué es una API
+  <a href="#por-que-usar-constantes" title="¿Por qué usar constantes?" class="md-nav__link">
+    ¿Por qué usar constantes?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conexion-con-la-api" title="Conexión con la API" class="md-nav__link">
-    Conexión con la API
+  <a href="#tipos-de-recursos" title="Tipos de recursos" class="md-nav__link">
+    Tipos de recursos
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#antes-de-retrofit" title="Antes de Retrofit" class="md-nav__link">
-    Antes de Retrofit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-retrofit" title="Configurando Retrofit" class="md-nav__link">
-    Configurando Retrofit
+  <a href="#cambia-tus-colores" title="Cambia tus colores" class="md-nav__link">
+    Cambia tus colores
   </a>
   
 </li>
@@ -423,65 +409,26 @@
               
                 
                 
-                <h1 id="usando-una-api-externa">Usando una API externa</h1>
-<h2 id="que-es-una-api">Qué es una API</h2>
-<p>Una API es una Interfaz de Programación de Aplicaciones (Application Programming Interface). Básicamente, una API es un servidor que gracias a unos métodos en su código, nos va a proveer de datos para nuestro uso.</p>
-<p>En nuestro caso, y debido a su simplicidad, vamos a hacer una aplicación que pida datos a una API sobre perros, con la que montaremos un listado y un perfil para el perro.</p>
-<p>Nuestra API es <a href="https://dog.ceo/dog-api/">dogapi</a>.</p>
-<h2 id="conexion-con-la-api">Conexión con la API</h2>
-<p>Para empezar, debemos añadir las dependencias de <a href="http://square.github.io/retrofit/">Retrofit</a>, que es la librería que vamos a usar para la conexión con nuestra API. Retrofit es un cliente HTTP hecho para Java y Android.</p>
-<p><strong><em>build.gradle (Module: app)</em></strong></p>
-<pre><code class="Java">  compile &quot;com.squareup.retrofit2:retrofit:2.3.0&quot;
-  compile &quot;com.squareup.retrofit2:converter-gson:2.3.0&quot;
-</code></pre>
-
-<p>Cuando introducimos código en Gradle, tenemos que volver a sincronizar el código para que los cambios sean efectivos.</p>
-<p>Ahora creamos un nuevo Package llamado API.</p>
-<p><img alt="Screenshot" src="../img/package_api.png" /></p>
-<h2 id="antes-de-retrofit">Antes de Retrofit</h2>
-<p>Tenemos que crear nuestro modelo de datos, que nos servirá para recoger la información del servidor.</p>
-<p>Creamos un Package llamado entities y dentro de él un archivo BreedWrapper.java</p>
-<pre><code class="java">public class BreedWrapper {
-    @SerializedName(&quot;message&quot;)
-    private List&lt;String&gt; breeds;
-
-    public List&lt;String&gt; getBreeds() {
-        return breeds;
-    }
-}
-</code></pre>
-
-<h2 id="configurando-retrofit">Configurando Retrofit</h2>
-<p>Cuando trabajamos con Retrofit, debemos tener dos archivos básicos. Uno de ellos es una interfaz donde definiremos todos los métodos que usaremos para conectarnos a la API (por ejemplo traer todas las razas de perros o información acerca de una).</p>
-<p>El otro es el cliente, que nos servirá para configurar nuestra conexión con la API y todo lo que le queramos añadir a Retrofit (por ejemplo un Interceptor). Aquí también instanciamos la interfaz para que podamos usar los métodos en nuestro código.</p>
-<p>Creamos nuestra interfaz. La vamos a llamar <strong>DogService.java</strong>.</p>
-<pre><code class="java">public interface DogService {
-    @GET(&quot;breeds/list&quot;)
-    Call&lt;BreedWrapper&gt; getBreeds();
-}
-</code></pre>
-
-<p>Con DogService.java estamos creando un "puente" entre nuestra app y la API. Cuando queramos traer todas las razas de perro, solamente tendremos que instanciar esa interfaz y usar el método.</p>
-<p>Ahora vamos a crear el cliente, <strong><em>DogClient.java</em></strong></p>
-<pre><code class="java">public class DogClient {
-    private Retrofit retrofit;
-    private final static String BASE_URL = &quot;https://dog.ceo/api/&quot;;
-
-    public DogClient(){
-        this.retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-    }
-
-    public DogService getDogService(){
-        return this.retrofit.create(DogService.class);
-    }
-}
-</code></pre>
-
-<p>El cliente, nos sirve para hacer la conexión. Tenemos la url básica de la api <code>https://dog.ceo/api/</code> a la que concatenaremos los métodos que querremos usar. Además, debemos crear una instancia de Retrofit en nuestro constructor, indicándole la URL base y que queremos que GSON convierta los objetos JSON a objetos de Java.</p>
-<p>Por último, declaramos un método que nos dará una instancia del servicio, con el que podremos llamar a nuestra API.</p>
+                <h1 id="usando-constantes-como-recursos">Usando constantes como recursos</h1>
+<h2 id="por-que-usar-constantes">¿Por qué usar constantes?</h2>
+<p>Al usar archivos de recursos para guardar nuestros valores como constantes, nos vamos a asegurar de que podamos usar estos valores en cualquier sitio de nuestra aplicación. Así, si alguna vez necesitamos cambiar el valor del recurso, sólo tendremos que efectuar un cambio en el archivo correspondiente y no preocuparnos por el comprobar que se haya cambiado en toda la app.</p>
+<h2 id="tipos-de-recursos">Tipos de recursos</h2>
+<p>Dentro de la carpeta <strong>res</strong> de nuestro proyecto podemos albergar varios tipos de recursos.</p>
+<ul>
+<li>animator/: archivos XML para trabajar con animaciones de propiedades. Sirven para animar casi cualquier cosa.</li>
+<li>anim/: archivos para las animaciones de interpolación de movimientos. Son animaciones que definimos con puntos de comienzo o el tiempo de la animación.</li>
+<li>color/: aquí se definen los colores para nuestra paleta.</li>
+<li>drawable/: archivos de mapas de bits (.png, .jpg, .gif)</li>
+<li>minmap/: archivos de elementos de diseño para distintas densidades.</li>
+<li>layout/: archivos XML que definen la interfaz de usuario.</li>
+<li>menu/: archivos que definen los menus de la aplicación.</li>
+<li>raw/: archivos arbitrarios para guardar sin procesar.</li>
+<li>values/: archivos XML que contienen valore simples como strings, valores enteros o colores (arrays.xml, colors.xml, dimens.xml, strings.xml, styles.xml)</li>
+<li>xml/: archivos XML arbitrarios que pueden ser leidos en tiempo de ejecución.</li>
+</ul>
+<h2 id="cambia-tus-colores">Cambia tus colores</h2>
+<p>Entra en <a href="https://www.materialpalette.com/">este</a> enlace y elige una gama de colores que te guste para tu app.</p>
+<p>Cuando la tengas abre tu archivo <strong>res/values/colors.xml</strong> y cambia los colores!</p>
                 
                   
                 
@@ -500,7 +447,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../constantes/" title="Usando constantes como recursos" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../vista/" title="Organizar la vista" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -509,19 +456,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Usando constantes como recursos
+                Organizar la vista
               </span>
             </div>
           </a>
         
         
-          <a href="../listado/" title="Crear un listado" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../api/" title="Usando una API externa" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Crear un listado
+                Usando una API externa
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

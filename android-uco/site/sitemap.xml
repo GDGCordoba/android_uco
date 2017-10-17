@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-15</lastmod>
+     <lastmod>2017-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/create_project/</loc>
-     <lastmod>2017-10-15</lastmod>
+     <lastmod>2017-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,15 @@
     
     <url>
      <loc>/vista/</loc>
-     <lastmod>2017-10-15</lastmod>
+     <lastmod>2017-10-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/constantes/</loc>
+     <lastmod>2017-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +36,7 @@
     
     <url>
      <loc>/api/</loc>
-     <lastmod>2017-10-15</lastmod>
+     <lastmod>2017-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +44,7 @@
     
     <url>
      <loc>/listado/</loc>
-     <lastmod>2017-10-15</lastmod>
+     <lastmod>2017-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +52,7 @@
     
     <url>
      <loc>/vista/</loc>
-     <lastmod>2017-10-15</lastmod>
+     <lastmod>2017-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -52,7 +60,7 @@
     
     <url>
      <loc>/inflando_vista/</loc>
-     <lastmod>2017-10-15</lastmod>
+     <lastmod>2017-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -60,7 +68,7 @@
     
     <url>
      <loc>/pidiendo_datos/</loc>
-     <lastmod>2017-10-15</lastmod>
+     <lastmod>2017-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -68,7 +76,7 @@
     
     <url>
      <loc>/nueva_actividad/</loc>
-     <lastmod>2017-10-15</lastmod>
+     <lastmod>2017-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
