@@ -4,6 +4,7 @@ pages:
   - Inicio: index.md
   - Crear proyecto: create_project.md
   - Organizar la vista: vista.md
+  - Usando constantes como recursos: constantes.md
   - Usando una API externa: api.md
   - Crear un listado: listado.md
   - Nuestra primera vista: vista.md
